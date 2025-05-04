@@ -20,11 +20,11 @@
                 <div class="product-card">
                     <img src="${product.image}" class="product-image">
                     <h3>${product.name}</h3>
-                    <p class="product-price">€${product.price.toFixed(2)}</p>
+                    <p class="product-price">$${product.price.toFixed(2)}</p>
                     <p>${product.description}</p>
                     <button onclick="Cart.addItem(${JSON.stringify(product).replace(/"/g, '&quot;')}" 
                         style="margin-top: 10px; padding: 8px 15px; background-color: #3498db; color: white; border: none; border-radius: 4px; cursor: pointer;">
-                        Aggiungi al Carrello
+                        more
                     </button>
                 </div>
             `).join('') : 

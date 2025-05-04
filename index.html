@@ -118,7 +118,7 @@
     <h1>HG vegitable</h1>
     <div class="search-container">
         <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Cerca prodotti...">
+            <input type="text" id="searchInput" placeholder="search vegitable...">
             <button class="search-button" onclick="triggerSearch()">
                 🔍 search
             </button>
@@ -163,23 +163,122 @@
                 id: 1,
                 name: "cucumber",
                 price: 2.00,
-                description: "Lorem ipsum",
+                description: "The cucumber is a widely-cultivated creeping vine plant in the family Cucurbitaceae.",
                 image: "img/1.jpeg"
             },
             {
                 id: 2,
-                name: "Pepper",
+                name: "Capsicum",
                 price: 1.99,
-                description: "Lorem ipsum",
-                image: "img/2.jpg"
+                description: "Capsicum  is a genus of flowering plants in the nightshade family Solanaceae.",
+                   image: "img/2.jpg"
             },
           {
                 id: 3,
-                name: "artichoke",
+                name: "Ginger",
                 price: 2.99,
-                description: "Lorem ipsum",
+                description: "Ginger may have numerous health benefits due to its anti-inflammatory, anti-nausea, and other properties. ",
                 image: "img/3.jpg"
-            }
+            },
+            {
+                id: 4,
+                name: "Broccoli",
+                price: 2.33,
+                description: "Broccoli  is an edible green plant in the cabbage family whose large flowering head.",
+                image: "img/4.jpg"
+            },
+            {
+                id: 5,
+                name: "potatoes",
+                price: 3.00,
+                description: "The potato is a starchy tuberous vegetable native to the Americas that is consumed as a staple food in many parts of the world.",
+                image: "img/5.jpg"
+            },
+            {
+                id: 6,
+                name: "Tomato",
+                price: 2.55,
+                description: "The tomato , Solanum lycopersicum, is a plant whose fruit is an edible berry that is eaten as a vegetable. ",
+                image: "img/6.jpg"
+            },
+            {
+                id: 7,
+                name: "Spinach",
+                price: 3.44,
+                description: "Eating spinach may benefit eye health, reduce oxidative stress, help prevent cancer, and reduce blood pressure levels. ",
+                image: "img/7.webp"
+            },
+            {
+                id: 8,
+                name: "Onion",
+                price: 3.11,
+                description: "An onion, also known as the bulb onion, is a vegetable that is the most widely cultivated species of the genus Allium. ",
+                image: "img/8.jpeg"
+            },
+            {
+                id: 9,
+                name: "Coriander",
+                price: 3.18,
+                description: "Coriander, a feathery annual plant of the parsley family, is also known by the name cilantro.  ",
+                image: "img/9.jpg"
+            },
+            {
+                id: 10,
+                name: "Lady finger",
+                price: 4.00,
+                description: "Lady finger is a versatile and widely appreciated vegetable in various cuisines.",
+                image: "img/10.jpeg"
+            },
+            {
+                id: 11,
+                name: "Green chillies",
+                price: 3.30,
+                description: "Green chillies are the main ingredient in every household in India, as well as in Mexican and Thai cuisines. ",
+                image: "img/11.jpg"
+            },
+            {
+                id: 12,
+                name: "Red chillies",
+                price: 3.40,
+                description: "Red Chillies has consistently pushed boundaries across the spectrum, creating and producing entertaining content.",
+                image: "img/12.jpg"
+            },
+            {
+                id: 13,
+                name: "Brinjal",
+                price: 4.40,
+                description: "Brinjal is a nutritious food that helps in weight loss, diabetes, insomnia and hair loss.",
+                image: "img/13.jpg"
+            },
+            {
+                id: 14,
+                name: "Bitter gourd",
+                price: 4.50,
+                description: "Bitter gourd is a green vegetable with a bitter taste and many health benefits. ",
+                image: "img/14.jpg"
+            },
+            {
+                id: 15,
+                name: "Carrot",
+                price: 4.20,
+                description: "Carrots are root vegetables rich in beta-carotene, fiber, vitamin K1, and antioxidants. ",
+                image: "img/15.jpg"
+            },
+            {
+                id: 16,
+                name: "Peas",
+                price: 4.10,
+                description: " peas can improve your eye health, digestion, blood sugar, and heart health.  ",
+                image: "img/16.jpg"
+            },
+            {
+                id: 17,
+                name: "Mint",
+                price: 4.15,
+                description: "Mint is a fragrant and delicious plant that is an ingredient in many foods and beverages. ",
+                image: "img/17.jpg"
+            },
+
           
         ];
 
@@ -224,7 +323,7 @@
                             <p>Quantity: ${item.quantity}</p>
                         </div>
                         <div>
-                            <p>€${(item.price * item.quantity).toFixed(2)}</p>
+                            <p>$${(item.price * item.quantity).toFixed(2)}</p>
                             <button onclick="Cart.removeItem(${item.id})">X</button>
                         </div>
                     </div>
@@ -261,7 +360,7 @@
                     <p>${product.description}</p>
                     <button onclick="Cart.addItem(${JSON.stringify(product).replace(/"/g, '&quot;')})" 
                         style="margin-top: 10px; padding: 8px 15px; background-color: #3498db; color: white; border: none; border-radius: 4px; cursor: pointer;">
-                       more
+                       add
                     </button>
                 </div>
             `).join('');
